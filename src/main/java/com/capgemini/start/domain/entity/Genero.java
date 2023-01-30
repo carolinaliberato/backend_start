@@ -30,7 +30,7 @@ public class Genero {
 	@Column(name ="DS_GENERO", nullable = false, length = 100)
 	private String descricao;
 	
-	@Column(name = "DT_INCLUSAO", nullable = false)
+	@Column(name = "DT_CRIACAO", nullable = false)
 	private Date dataCriacao;
 	
 	@Column(name = "DT_ALTERACAO")
