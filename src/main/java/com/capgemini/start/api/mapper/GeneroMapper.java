@@ -19,5 +19,4 @@ public interface GeneroMapper {
 	@Mapping(target = "dataAlteracao", ignore = true)
 	Genero toEntity(GeneroInputDTO genero);
 
-
 }

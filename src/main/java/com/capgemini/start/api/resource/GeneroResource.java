@@ -18,30 +18,27 @@ import com.capgemini.start.api.dto.output.GeneroDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-@Tag(name = "Genero", description = "Genero dos filmes")
+@Tag(name = "Genero", description = "Gênero")
 public interface GeneroResource {
 	
-	@Operation(summary = "Consulta um genero por id")
+	@Operation(summary = "Consulta um Genero por id")
 	@GetMapping(value = "/{id}")
 	ResponseEntity<GeneroDTO> findById(@PathVariable Long id);
 	
-	@Operation(summary = "Lista todos os generos")
+	@Operation(summary = "Lista todos os gêneros")
 	@GetMapping()
 	ResponseEntity<List<GeneroDTO>> findAll();
 	
-	@Operation(summary = "Insere um genero")
+	@Operation(summary = "Insere um gênero")
 	@PostMapping()
 	ResponseEntity<GeneroDTO> insert(@RequestBody @Valid GeneroInputDTO genero);
 	
-	@Operation(summary = "Atualiza um genero")
+	@Operation(summary = "Atualiza um gênero")
 	@PutMapping(value = "/{id}")
 	ResponseEntity<GeneroDTO> update(@PathVariable Long id, @RequestBody @Valid GeneroInputDTO genero);
 	
-	@Operation(summary = "Exclui um genero pelo id")
+	@Operation(summary = "Exclui um gênero pelo id")
 	@DeleteMapping(value = "/{id}")
 	ResponseEntity<Void> delete(@PathVariable Long id);
 
-
-
-	
 }

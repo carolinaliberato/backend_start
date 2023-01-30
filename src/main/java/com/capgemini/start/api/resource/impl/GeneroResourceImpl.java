@@ -81,5 +81,6 @@ public class GeneroResourceImpl implements GeneroResource{
 		return ResponseEntity.ok().build();
 	}
 
-
+	
+	
 }

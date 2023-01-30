@@ -4,6 +4,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -13,26 +15,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name = "tb_genero")
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity(name="TB_GENERO")
 public class Genero {
 	
-	@Id
 	@EqualsAndHashCode.Include
-	@Column(name= "id_genero", nullable = false)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID_GENERO", nullable = false)
 	private Long id;
 	
-	@Column(name= "ds_descricao", nullable = false, length = 100)
+	@Column(name ="DS_GENERO", nullable = false, length = 100)
 	private String descricao;
 	
-	@Column(name= "dt_inclusao", nullable = false)
+	@Column(name = "DT_INCLUSAO", nullable = false)
 	private Date dataCriacao;
 	
-	@Column(name= "dt_alteracao")
+	@Column(name = "DT_ALTERACAO")
 	private Date dataAlteracao;
-
 	
 }
-
